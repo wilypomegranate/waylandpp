@@ -24,6 +24,7 @@
 #include <cctype>
 #include <cmath>
 #include <stdexcept>
+#include <cstdint>
 
 #include "pugixml.hpp"
 
@@ -1110,6 +1111,7 @@ int main(int argc, char *argv[])
               << "#include <memory>" << std::endl
               << "#include <string>" << std::endl
               << "#include <vector>" << std::endl
+              << "#include <cstdint>" << std::endl
               << std::endl
               << (server ? "#include <wayland-server.hpp>" : "#include <wayland-client.hpp>") << std::endl;
 
@@ -1129,6 +1131,7 @@ int main(int argc, char *argv[])
                        << "#include <memory>" << std::endl
                        << "#include <string>" << std::endl
                        << "#include <vector>" << std::endl
+                       << "#include <cstdint>" << std::endl
                        << std::endl
                        << "#include <wayland-server.hpp>" << std::endl
                        << std::endl;

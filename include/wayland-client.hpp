@@ -33,6 +33,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <cstdint>
 #include <wayland-version.hpp>
 #include <wayland-client-core.h>
 #include <wayland-util.hpp>
