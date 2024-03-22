@@ -62,7 +62,7 @@ public:
       {
         outputs.emplace_back();
         auto& output = outputs.back();
-        registry.bind(name, output, version);
+        registry.bind(name, output, output.version);
       }
     };
     // Print global information

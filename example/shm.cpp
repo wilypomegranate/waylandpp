@@ -228,15 +228,15 @@ public:
     registry.on_global() = [&] (uint32_t name, const std::string& interface, uint32_t version)
     {
       if(interface == compositor_t::interface_name)
-        registry.bind(name, compositor, version);
+        registry.bind(name, compositor, compositor.version);
       else if(interface == shell_t::interface_name)
-        registry.bind(name, shell, version);
+        registry.bind(name, shell, shell.version);
       else if(interface == xdg_wm_base_t::interface_name)
-        registry.bind(name, xdg_wm_base, version);
+        registry.bind(name, xdg_wm_base, xdg_wm_base.version);
       else if(interface == seat_t::interface_name)
-        registry.bind(name, seat, version);
+        registry.bind(name, seat, seat.version);
       else if(interface == shm_t::interface_name)
-        registry.bind(name, shm, version);
+        registry.bind(name, shm, shm.version);
     };
     display.roundtrip();
 

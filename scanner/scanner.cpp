@@ -522,6 +522,7 @@ struct interface_t : public element_t
        << "  " << name << "_t proxy_create_wrapper();" << std::endl
        << std::endl
        << "  static const std::string interface_name;" << std::endl
+       << "  static constexpr std::uint32_t version = "<< version << ";" << std::endl
        << std::endl
        << "  operator " << orig_name << "*() const;" << std::endl
        << std::endl;
