@@ -68,6 +68,9 @@ set(install_namespace "Waylandpp")
 # C++ 11
 set(CMAKE_CXX_STANDARD 11)
 
+add_compile_options(-Wall -Wextra -Wpedantic)
+set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
+
 # sets ${PREFIX}_LIBRARIES to the libraries' full path
 function(pkg_libs_full_path PREFIX)
   if(${PREFIX}_FOUND)

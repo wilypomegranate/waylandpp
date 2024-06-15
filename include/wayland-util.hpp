@@ -426,7 +426,7 @@ namespace wayland
     class argument_t
     {
     private:
-      wl_argument argument = { .i = 0 };
+      wl_argument argument = {0};
       bool is_array{false};
 
       // Uninitialized argument - only for internal use

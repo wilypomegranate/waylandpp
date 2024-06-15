@@ -862,7 +862,7 @@ struct arg_t
 void parse_args(int argc, char **argv, std::vector<arg_t>& map, std::vector<std::string>& extra)
 {
   bool opts_end = false;
-  for(unsigned int c = 1; c < argc; c++)
+  for(int c = 1; c < argc; c++)
   {
     std::string str(argv[c]);
     if(opts_end || str[0] != '-')
@@ -905,7 +905,7 @@ int main(int argc, char *argv[])
   std::list<interface_t> interfaces;
   int enum_id = 0;
 
-  for(int c = 0; c < extra.size()-2; c++)
+  for(size_t c = 0; c < extra.size()-2; c++)
   {
     xml_document doc;
     doc.load_file(extra[c].c_str());
