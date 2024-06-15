@@ -1199,6 +1199,10 @@ int main(int argc, char *argv[])
   auto hpp_basename = (hpp_slash_pos == std::string::npos ? hpp_file : hpp_file.substr(hpp_slash_pos + 1));
   wayland_cpp << "#include <" << hpp_basename << ">" << std::endl
               << std::endl
+              << "# pragma GCC diagnostic ignored \"-Wpedantic\""
+              << std::endl
+              << "# pragma GCC diagnostic ignored \"-Wunused-parameter\""
+              << std::endl
               << "using namespace wayland;" << std::endl
               << "using namespace wayland::detail;" << std::endl;
   if(server)
