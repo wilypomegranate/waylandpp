@@ -39,7 +39,7 @@ namespace
   log_handler g_log_handler;
 
   extern "C"
-  void _c_log_handler(const char *format, va_list args)
+  void _server_c_log_handler(const char *format, va_list args)
   {
     if(!g_log_handler)
       return;
@@ -73,7 +73,7 @@ namespace
 void wayland::server::set_log_handler(const log_handler& handler)
 {
   g_log_handler = handler;
-  wl_log_set_handler_server(_c_log_handler);
+  wl_log_set_handler_server(_server_c_log_handler);
 }
 
 //-----------------------------------------------------------------------------
