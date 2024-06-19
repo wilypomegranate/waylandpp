@@ -194,6 +194,7 @@ public:
     registry = display.get_registry();
     registry.on_global() = [&] (uint32_t name, const std::string& interface, uint32_t version)
     {
+      (void)(version);
       if(interface == compositor_t::interface_name)
         registry.bind(name, compositor, compositor.version);
       else if(interface == shell_t::interface_name)

@@ -68,6 +68,7 @@ private:
 
     registry.on_global() = [&seat, &registry](std::uint32_t name, const std::string& interface, std::uint32_t version)
     {
+      (void)version;
       if(interface == seat_t::interface_name)
         registry.bind(name, seat, seat.version);
     };

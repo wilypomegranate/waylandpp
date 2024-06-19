@@ -77,6 +77,7 @@ int main()
   auto registry = display.get_registry();
   registry.on_global() = [&] (uint32_t name, const std::string& interface, uint32_t version)
   {
+    (void)(version);
     std::cout << "Found global: " << interface << std::endl;
     if(interface == wayland::pingpong_t::interface_name)
       registry.bind(name, pingpong, pingpong.version);

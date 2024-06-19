@@ -429,6 +429,7 @@ read_intent::read_intent(wl_display *display, wl_event_queue *event_queue)
 
 read_intent::~read_intent()
 {
+  (void)(event_queue);
   if(!finalized)
     try
     {
